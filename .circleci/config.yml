@@ -63,14 +63,14 @@ jobs:
           name: Lint
           command: yarn lint
       - run:
+          name: Release
+          command: yarn release
+      - run:
           name: Post to GitHub
           command: npx ci github-post
       - run:
           name: Post to Slack
           command: npx ci slack
-      - run:
-          name: Release
-          command: yarn release
 
 workflows:
   version: 2
