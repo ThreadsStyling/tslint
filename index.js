@@ -21,14 +21,14 @@ const commonRules = {
   'no-invalid-this': true,
   'no-magic-numbers': false,
   'no-parameter-reassignment': true,
-  'no-require-imports': true,
+  'no-require-imports': false,
   'no-return-await': true,
   'no-sparse-arrays': true,
   'no-switch-case-fall-through': true,
   'no-this-assignment': [true, {'allow-destructuring': true}],
   'no-unnecessary-callback-wrapper': true,
   'no-unnecessary-class': true,
-  'object-literal-sort-keys': [true, 'ignore-case'],
+  'object-literal-sort-keys': false,
   'ordered-imports': [
     true,
     {
@@ -57,12 +57,16 @@ module.exports = {
     ]
   },
   rules: Object.assign(
-    {},
+    {
+      'no-var-requires': false,
+      'array-type': false,
+      'member-access': false
+    },
     commonRules,
     {
       'await-promise': true,
-      'interface-name': [true, 'never-prefix'],
-      'no-any': true,
+      'interface-name': [true, "always-prefix"],
+      'no-any': false,
       'no-floating-promises': true,
       'no-inferrable-types': true,
       'no-non-null-assertion': true,
