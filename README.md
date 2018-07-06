@@ -1,8 +1,5 @@
 # `tslint` Config
 
-[![NPM version](http://img.shields.io/npm/v/tslint-config-mailonline.svg?style=flat-square)](https://www.npmjs.org/package/tslint-config-mailonline)
-[![Travis build status](http://img.shields.io/travis/MailOnline/tslint-config-mailonline/master.svg?style=flat-square)](https://travis-ci.org/MailOnline/tslint-config-mailonline)
-
 ThreadsStyling TSLint configuration.
 
 ## Usage
