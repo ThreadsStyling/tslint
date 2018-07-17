@@ -1,6 +1,6 @@
 {
   "name": "@threads/tslint",
-  "version": "3.1.0",
+  "version": "3.2.0",
   "description": "TSLint config for ThreadsStyling",
   "main": "./index.js",
   "repository": {
