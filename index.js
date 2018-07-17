@@ -37,11 +37,17 @@ const commonRules = {
       'named-imports-order': 'any'
     }
   ],
-  'prefer-conditional-expression': [true, 'check-else-if'],
+
+  // This rule does not make any sense.
+  'prefer-conditional-expression': false,
+
   'prefer-function-over-method': true,
   'prefer-object-spread': true,
   'prefer-switch': true,
-  'prefer-template': [true, 'allow-single-concat'],
+
+  // I think we can decide for ourselves which string syntax to use.
+  'prefer-template': false,
+
   'triple-equals': true
 };
 
@@ -65,14 +71,37 @@ module.exports = {
     commonRules,
     {
       'await-promise': true,
-      'interface-name': [true, "always-prefix"],
+
+      // Some team members believe interface prefixing is remnants of C#.
+      'interface-name': false,
+
       'no-any': false,
       'no-floating-promises': true,
       'no-inferrable-types': true,
       'no-non-null-assertion': true,
       'no-unused-variable': true,
       'promise-function-async': true,
-      'restrict-plus-operands': true
+      'restrict-plus-operands': true,
+
+      // Not sure if we should disable this one.
+      // But I sometimes shadow variables and Forbes said he does, too.
+      'no-shadowed-variable': false,
+
+      // Sometimes you need to do bitwise operations.
+      "no-bitwise": false,
+
+      // I sometimes use empty interfaces, don't see any harm in them.
+      "no-empty-interface": false,
+
+      // Not sure if we should disable this. Any preference?
+      // "no-parameter-reassignment": false,
+
+      // Useless rule.
+      "array-type": false,
+
+      // Don't think tslint should force developer to pick loop style.
+      // Also "for" loop is faster than "for-of" in native JS.
+      "prefer-for-of": false
     }
   )
 };
