@@ -42,7 +42,10 @@ const commonRules = {
   'prefer-conditional-expression': false,
 
   'prefer-function-over-method': true,
-  'prefer-object-spread': true,
+
+  // Sometimes you just want to do Object.assign
+  'prefer-object-spread': false,
+
   'prefer-switch': true,
 
   // I think we can decide for ourselves which string syntax to use.
@@ -70,18 +73,12 @@ module.exports = {
     },
     commonRules,
     {
-      'await-promise': true,
-
       // Some team members believe interface prefixing is remnants of C#.
       'interface-name': false,
 
       'no-any': false,
-      'no-floating-promises': true,
       'no-inferrable-types': true,
       'no-non-null-assertion': true,
-      'no-unused-variable': true,
-      'promise-function-async': true,
-      'restrict-plus-operands': true,
 
       // Not sure if we should disable this one.
       // But I sometimes shadow variables and Forbes said he does, too.
@@ -101,7 +98,23 @@ module.exports = {
 
       // Don't think tslint should force developer to pick loop style.
       // Also "for" loop is faster than "for-of" in native JS.
-      "prefer-for-of": false
+      "prefer-for-of": false,
+
+      // Below rules require to setup tslint types (https://palantir.github.io/tslint/usage/type-checking/),
+      // which I'm not planning to do, so, for now, its better to disable them then to simply see
+      // warnings that they are not configured.
+      "await-promise": false,
+      "no-floating-promises": false,
+      "no-unused-variable": false,
+      "promise-function-async": false,
+      "restrict-plus-operands": false,
+
+      // This is stylistic rule that dictates how to sort members in a class.
+      // Don't think we need it, if nobody disagrees.
+      "member-ordering": false,
+
+      // It should be fine to have more than one class per file.
+      "max-classes-per-file": false
     }
   )
 };
