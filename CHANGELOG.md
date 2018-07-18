@@ -1,3 +1,16 @@
+<a name="3.3.0"></a>
+# [3.3.0](https://github.com/ThreadsStyling/tslint/compare/v3.2.0...v3.3.0) (2018-07-18)
+
+
+### Bug Fixes
+
+* 🐛 remove warnings for not configured rules ([16eab0b](https://github.com/ThreadsStyling/tslint/commit/16eab0b))
+
+
+### Features
+
+* 🎸 disable few rules ([04c82ab](https://github.com/ThreadsStyling/tslint/commit/04c82ab))
+
 <a name="3.2.0"></a>
 # [3.2.0](https://github.com/ThreadsStyling/tslint/compare/v3.1.0...v3.2.0) (2018-07-17)
 
