@@ -42,7 +42,10 @@ const commonRules = {
   'prefer-conditional-expression': false,
 
   'prefer-function-over-method': true,
-  'prefer-object-spread': true,
+
+  // Sometimes you just want to do Object.assign
+  'prefer-object-spread': false,
+
   'prefer-switch': true,
 
   // I think we can decide for ourselves which string syntax to use.
@@ -104,7 +107,14 @@ module.exports = {
       "no-floating-promises": false,
       "no-unused-variable": false,
       "promise-function-async": false,
-      "restrict-plus-operands": false
+      "restrict-plus-operands": false,
+
+      // This is stylistic rule that dictates how to sort members in a class.
+      // Don't think we need it, if nobody disagrees.
+      "member-ordering": false,
+
+      // It should be fine to have more than one class per file.
+      "max-classes-per-file": false
     }
   )
 };
