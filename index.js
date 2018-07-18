@@ -70,18 +70,12 @@ module.exports = {
     },
     commonRules,
     {
-      'await-promise': true,
-
       // Some team members believe interface prefixing is remnants of C#.
       'interface-name': false,
 
       'no-any': false,
-      'no-floating-promises': true,
       'no-inferrable-types': true,
       'no-non-null-assertion': true,
-      'no-unused-variable': true,
-      'promise-function-async': true,
-      'restrict-plus-operands': true,
 
       // Not sure if we should disable this one.
       // But I sometimes shadow variables and Forbes said he does, too.
@@ -101,7 +95,16 @@ module.exports = {
 
       // Don't think tslint should force developer to pick loop style.
       // Also "for" loop is faster than "for-of" in native JS.
-      "prefer-for-of": false
+      "prefer-for-of": false,
+
+      // Below rules require to setup tslint types (https://palantir.github.io/tslint/usage/type-checking/),
+      // which I'm not planning to do, so, for now, its better to disable them then to simply see
+      // warnings that they are not configured.
+      "await-promise": false,
+      "no-floating-promises": false,
+      "no-unused-variable": false,
+      "promise-function-async": false,
+      "restrict-plus-operands": false
     }
   )
 };
