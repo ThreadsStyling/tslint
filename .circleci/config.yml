@@ -31,12 +31,6 @@ jobs:
       - run:
           name: Lint
           command: yarn lint
-      - run:
-          name: Post to GitHub
-          command: npx ci github-post
-      - run:
-          name: Post to Slack
-          command: npx ci slack
 
   master:
     <<: *container
