@@ -114,7 +114,8 @@ module.exports = {
       "member-ordering": false,
 
       // It should be fine to have more than one class per file.
-      "max-classes-per-file": false
+      "max-classes-per-file": false,
+      "no-unused-expression": false
     }
   )
 };
