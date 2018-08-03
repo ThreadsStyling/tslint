@@ -1,14 +1,8 @@
 /* tslint:disable:prefer-object-spread */
 const commonRules = {
-  'ban': [
-    true,
-    'eval',
-    '$',
-    ['describe', 'only'],
-    ['it', 'only']
-  ],
+  ban: [true, 'eval', '$', ['describe', 'only'], ['it', 'only']],
   'ban-comma-operator': true,
-  'encoding': true,
+  encoding: true,
   'newline-before-return': true,
   'no-duplicate-imports': true,
   'no-duplicate-switch-case': true,
@@ -34,8 +28,8 @@ const commonRules = {
     {
       'grouped-imports': true,
       'import-sources-order': 'any',
-      'named-imports-order': 'any'
-    }
+      'named-imports-order': 'any',
+    },
   ],
 
   // This rule does not make any sense.
@@ -51,25 +45,20 @@ const commonRules = {
   // I think we can decide for ourselves which string syntax to use.
   'prefer-template': false,
 
-  'triple-equals': true
+  'triple-equals': true,
 };
 
 module.exports = {
   extends: ['tslint:recommended', 'tslint-config-prettier'],
   jsRules: commonRules,
   linterOptions: {
-    exclude: [
-      'node_modules',
-      'dist',
-      'coverage',
-      'dev'
-    ]
+    exclude: ['node_modules', 'dist', 'coverage', 'dev'],
   },
   rules: Object.assign(
     {
       'no-var-requires': false,
       'array-type': false,
-      'member-access': false
+      'member-access': false,
     },
     commonRules,
     {
@@ -85,36 +74,36 @@ module.exports = {
       'no-shadowed-variable': false,
 
       // Sometimes you need to do bitwise operations.
-      "no-bitwise": false,
+      'no-bitwise': false,
 
       // I sometimes use empty interfaces, don't see any harm in them.
-      "no-empty-interface": false,
+      'no-empty-interface': false,
 
       // Not sure if we should disable this. Any preference?
       // "no-parameter-reassignment": false,
 
       // Useless rule.
-      "array-type": false,
+      'array-type': false,
 
       // Don't think tslint should force developer to pick loop style.
       // Also "for" loop is faster than "for-of" in native JS.
-      "prefer-for-of": false,
+      'prefer-for-of': false,
 
       // Below rules require to setup tslint types (https://palantir.github.io/tslint/usage/type-checking/),
       // which I'm not planning to do, so, for now, its better to disable them then to simply see
       // warnings that they are not configured.
-      "await-promise": false,
-      "no-floating-promises": false,
-      "no-unused-variable": false,
-      "promise-function-async": false,
-      "restrict-plus-operands": false,
+      'await-promise': false,
+      'no-floating-promises': false,
+      'no-unused-variable': false,
+      'promise-function-async': false,
+      'restrict-plus-operands': false,
 
       // This is stylistic rule that dictates how to sort members in a class.
       // Don't think we need it, if nobody disagrees.
-      "member-ordering": false,
+      'member-ordering': false,
 
       // It should be fine to have more than one class per file.
-      "max-classes-per-file": false
-    }
-  )
+      'max-classes-per-file': false,
+    },
+  ),
 };
