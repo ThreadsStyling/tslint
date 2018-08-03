@@ -6,17 +6,13 @@ const commonRules = {
   'jsx-no-multiline-js': false,
   'jsx-no-string-ref': true,
   'jsx-self-close': true,
-  'jsx-wrap-multiline': false
+  'jsx-wrap-multiline': false,
 };
 
 module.exports = {
   extends: ['tslint-react'],
   jsRules: commonRules,
-  rules: Object.assign(
-    {},
-    commonRules,
-    {
-      'jsx-curly-spacing': false
-    }
-  )
+  rules: Object.assign({}, commonRules, {
+    'jsx-curly-spacing': false,
+  }),
 };
