@@ -104,6 +104,9 @@ module.exports = {
 
       // It should be fine to have more than one class per file.
       'max-classes-per-file': false,
+      
+      // Allow simple if statements without curly braces for control-flow statements
+      'curly': [true, 'ignore-same-line'],
     },
   ),
 };
