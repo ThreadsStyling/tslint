@@ -1,3 +1,11 @@
+<a name="3.4.0"></a>
+# [3.4.0](https://github.com/ThreadsStyling/tslint/compare/v3.3.0...v3.4.0) (2018-08-09)
+
+
+### Features
+
+* allow no curly on single line ([b0c866d](https://github.com/ThreadsStyling/tslint/commit/b0c866d))
+
 <a name="3.3.0"></a>
 # [3.3.0](https://github.com/ThreadsStyling/tslint/compare/v3.2.0...v3.3.0) (2018-07-18)
 
