@@ -24,10 +24,6 @@ module.exports = {
       ],
     ],
     /**
-     * Forbids empty interfaces
-     */
-    'no-empty-interface': true,
-    /**
      * Disallows internal `module`
      */
     'no-internal-module': true,
