@@ -20,7 +20,7 @@
     "lint:tslint": "tslint './*.js'",
     "lint:prettier": "prettier --ignore-path .gitignore --write './**/*.{js,jsx,ts,tsx}'",
     "lint": "yarn lint:prettier && yarn lint:tslint",
-    "check-prettier-conflicts": "tslint-config-prettier-check './index.js' && tslint-config-prettier-check './react.js'",
+    "check-prettier-conflicts": "tslint-config-prettier-check './index.js'",
     "precommit": "yarn lint && yarn check-prettier-conflicts",
     "release": "semantic-release",
     "test": "echo 'This project has no tests' && exit 0"
@@ -41,7 +41,6 @@
     "typescript": "^2.9.2"
   },
   "dependencies": {
-    "tslint-config-prettier": "^1.13.0",
     "tslint-react": "^3.6.0"
   },
   "release": {
