@@ -61,10 +61,17 @@ jobs:
           command: yarn release
       - run:
           name: Post to GitHub
-          command: npx ci github-post
+          command: |
+            npx cross-ci :run \
+                npx commit-status success Version "'\${PROJECT_VERSION}'"
       - run:
           name: Post to Slack
-          command: npx ci slack
+          command: npx ci-scripts slack
+      - run:
+          name: Post to Slack on FAILURE
+          command:
+            'npx ci-scripts slack --eval --channel="devchat" --text="*\${PROJECT_NAME}* master build failed: \${BUILD_URL}" --icon_emoji=tired_face'
+          when: on_fail
 
 workflows:
   version: 2
