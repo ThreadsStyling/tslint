@@ -263,10 +263,6 @@ module.exports = {
      */
     'triple-equals': [true, 'allow-null-check'],
     /**
-     * Makes sure result of `typeof` is compared to correct string values
-     */
-    'typeof-compare': true,
-    /**
      * Enforces use of the isNaN() function to check for
      * NaN references instead of a comparison to the NaN
      * constant.
