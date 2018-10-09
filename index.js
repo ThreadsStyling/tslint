@@ -217,13 +217,6 @@ module.exports = {
      */
     'no-unused-expression': [true, 'allow-fast-null-checks'],
     /**
-     * Disallows unused imports, variables, functions and private
-     * class members. Similar to tsc’s –noUnusedParameters and
-     * –noUnusedLocals options, but does not interrupt code
-     * compilation.
-     */
-    'no-unused-variable': true,
-    /**
      * Disallows usage of variables before their declaration.
      */
     'no-use-before-declare': true,
