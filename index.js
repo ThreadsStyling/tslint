@@ -319,12 +319,6 @@ module.exports = {
      */
     'jsdoc-format': true,
     /**
-     * Requires that a default import have the same name
-     * as the declaration it imports. Does nothing for
-     * anonymous default exports.
-     */
-    'match-default-export-name': true,
-    /**
      * Requires the use of `as Type` for type assertions instead of `<Type>`.
      */
     'no-angle-bracket-type-assertion': true,
