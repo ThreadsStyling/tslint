@@ -358,7 +358,7 @@ module.exports = {
      * Checks whether the final clause of a
      * `switch` statement ends in `break;`.
      */
-    'switch-final-break': true,
+    'switch-final-break': [true, 'always'],
     /**
      * Disallows variable names like `any`, `Number`, `string` etc.
      */
