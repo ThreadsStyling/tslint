@@ -194,7 +194,7 @@ module.exports = {
      * Warns when a method is used outside of a
      * method call.
      *
-     * Use arrow functions instead.
+     * Use arrow function properties instead.
      */
     'no-unbound-method': [true, "ignore-static"],
     /**
