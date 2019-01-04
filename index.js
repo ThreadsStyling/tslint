@@ -195,10 +195,8 @@ module.exports = {
      * method call.
      *
      * Use arrow functions instead.
-     *
-     * Disabling due to many false positives in tests.
      */
-    'no-unbound-method': false,
+    'no-unbound-method': [true, "ignore-static"],
     /**
      * Disallows classes that are not strictly necessary.
      */
