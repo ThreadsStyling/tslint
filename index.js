@@ -194,9 +194,11 @@ module.exports = {
      * Warns when a method is used outside of a
      * method call.
      *
-     * Use arrow function properties instead.
+     * Use arrow functions instead.
+     *
+     * Disabling due to many false positives in tests.
      */
-    'no-unbound-method': true,
+    'no-unbound-method': false,
     /**
      * Disallows classes that are not strictly necessary.
      */
