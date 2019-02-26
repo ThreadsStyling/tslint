@@ -142,12 +142,6 @@ module.exports = {
      */
     'no-implicit-dependencies': [true, 'dev', 'optional'],
     /**
-     * Disallow type inference of `{}` (empty object type)
-     * at function and constructor call sites. It is better
-     * to use `unknown` if nothing is known about the result.
-     */
-    'no-inferred-empty-object-type': true,
-    /**
      * Warns on use of `${` in non-template strings.
      */
     'no-invalid-template-strings': true,
