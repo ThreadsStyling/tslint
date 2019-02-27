@@ -40,8 +40,8 @@
     "typescript": "^2.9.2"
   },
   "peerDependencies": {
-    "tslint": "^5.10.0",
-    "typescript": "^2.9.2"
+    "tslint": "*",
+    "typescript": "*"
   },
   "dependencies": {
     "tslint-react": "^3.6.0"
