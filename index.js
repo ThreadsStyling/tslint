@@ -157,8 +157,10 @@ module.exports = {
     /**
      * Forbids an object literal to appear in a type assertion
      * expression. Casting to `any` is still allowed.
+     *
+     * Disabled because it prevents using the new `as const` syntax
      */
-    'no-object-literal-type-assertion': true,
+    'no-object-literal-type-assertion': false,
     /**
      * Disallows shadowing variable declarations.
      */
@@ -190,7 +192,7 @@ module.exports = {
      *
      * Use arrow function properties instead.
      */
-    'no-unbound-method': [true, "ignore-static"],
+    'no-unbound-method': [true, 'ignore-static'],
     /**
      * Disallows classes that are not strictly necessary.
      */
