@@ -10,5 +10,6 @@ module.exports = {
     'jsx-no-string-ref': true,
     'jsx-self-close': false,
     'jsx-wrap-multiline': false,
+    'react-hooks-nesting': 'error',
   },
 };
