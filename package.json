@@ -45,6 +45,7 @@
     "typescript": "*"
   },
   "dependencies": {
-    "tslint-react": "^3.6.0"
+    "tslint-react": "^3.6.0",
+    "tslint-react-hooks": "^2.1.0"
   }
 }

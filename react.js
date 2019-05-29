@@ -1,5 +1,5 @@
 module.exports = {
-  extends: ['tslint-react'],
+  extends: ['tslint-react', 'tslint-react-hooks'],
   rules: {
     'jsx-alignment': false,
     'jsx-boolean-value': true,
