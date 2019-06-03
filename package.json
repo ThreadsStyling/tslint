@@ -21,10 +21,14 @@
     "lint:prettier": "prettier --ignore-path .gitignore --write './**/*.{js,jsx,ts,tsx}'",
     "lint": "yarn lint:prettier && yarn lint:tslint",
     "check-prettier-conflicts": "tslint-config-prettier-check './index.js' && tslint-config-prettier-check './react.js'",
-    "precommit": "yarn lint && yarn check-prettier-conflicts",
     "release": "semantic-release",
-    "commitmsg": "commitlint -E GIT_PARAMS",
     "test": "echo 'This project has no tests' && exit 0"
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+      "pre-commit": "yarn lint && yarn check-prettier-conflicts"
+    }
   },
   "devDependencies": {
     "@commitlint/cli": "^8.0.0",
