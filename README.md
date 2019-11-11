@@ -1,3 +1,13 @@
+# DEPRECATED
+
+For new projects, please use [`@threads/tsconfig`](https://github.com/ThreadsStyling/tsconfig):
+
+```
+yarn add -D @threads/tsconfig
+```
+
+Our new config is open source. This project is just here for posterity.
+
 # `tslint` Config
 
 ThreadsStyling TSLint configuration.
