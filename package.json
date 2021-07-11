@@ -21,30 +21,34 @@
     "lint:prettier": "prettier --ignore-path .gitignore --write './**/*.{js,jsx,ts,tsx}'",
     "lint": "yarn lint:prettier && yarn lint:tslint",
     "check-prettier-conflicts": "tslint-config-prettier-check './index.js' && tslint-config-prettier-check './react.js'",
-    "precommit": "yarn lint && yarn check-prettier-conflicts",
     "release": "semantic-release",
-    "commitmsg": "commitlint -E GIT_PARAMS",
     "test": "echo 'This project has no tests' && exit 0"
   },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+      "pre-commit": "yarn lint && yarn check-prettier-conflicts"
+    }
+  },
   "devDependencies": {
-    "@commitlint/cli": "^7.0.0",
-    "@commitlint/config-conventional": "^7.0.1",
-    "@semantic-release/changelog": "^2.1.1",
-    "@semantic-release/git": "^6.0.1",
-    "@semantic-release/npm": "^3.3.4",
+    "@commitlint/cli": "^8.0.0",
+    "@commitlint/config-conventional": "^8.0.0",
+    "@semantic-release/changelog": "^3.0.2",
+    "@semantic-release/git": "^7.0.8",
+    "@semantic-release/npm": "^5.1.7",
     "ci-scripts": "^0.10.0",
-    "husky": "^0.14.3",
+    "husky": "^2.3.0",
     "prettier": "^1.14.0",
     "semantic-release": "^15.6.3",
     "tslint": "^5.10.0",
     "tslint-config-prettier": "^1.18.0",
-    "typescript": "^2.9.2"
+    "typescript": "^3.5.1"
   },
   "peerDependencies": {
     "tslint": "*",
     "typescript": "*"
   },
   "dependencies": {
-    "tslint-react": "^3.6.0"
+    "tslint-react": "^4.0.0"
   }
 }
